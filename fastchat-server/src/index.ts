@@ -12,6 +12,19 @@ import { deleteMessage } from "./routes/messages";
 dotenv.config();
 
 const app = express();
+const PING_URL = "https://fast-chat-eight.vercel.app"; // Votre backend Render
+
+setInterval(() => {
+  fetch(PING_URL)
+    .then((res) => {
+      if (res.ok) {
+        console.log("Ping successful");
+      } else {
+        console.error("Ping failed with status:", res.status);
+      }
+    })
+    .catch((err) => console.error("Ping failed:", err));
+}, 600000); // Toutes les 10 minutes (600000ms)
 
 const allowedOrigins = [
   "http://localhost:3000",      // pour test local
