@@ -159,7 +159,7 @@ export default function RegisterPage() {
                 alt="Aperçu"
                 width={128}
                 height={128}
-                className="object-cover rounded-full mx-auto shadow"
+                className="object-cover rounded-full mx-auto h-48 w-48 shadow"
               />
               <button
                 type="button"
