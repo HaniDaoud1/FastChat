@@ -13,11 +13,20 @@ dotenv.config();
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:3000",      // pour test local
+  "http://localhost:3003",      // autre port local
+  "https://fast-chat-eight.vercel.app" // frontend déployé
+];
+
 app.use(cors({
-  origin: ["http://localhost:3000",
-    "http://localhost:3003",
-    "https://fast-chat-eight.vercel.app/"
-  ],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true,
 }));
 app.use(cookieParser());
