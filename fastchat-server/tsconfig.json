@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+
+    "rootDir": "./src",          // 👈 indique où se trouvent tes fichiers source
+    "outDir": "./dist"           // 👈 indique où générer les fichiers compilés
+  },
+  "include": ["src"],             // 👈 évite que TypeScript indexe des fichiers hors du dossier source
+  "exclude": ["node_modules", "dist"]  // 👈 évite de compiler des fichiers générés ou dépendances
+}
