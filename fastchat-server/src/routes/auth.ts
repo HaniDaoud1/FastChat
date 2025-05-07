@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../models/User";
 import { verifyToken } from "../middleware/auth";
-import {upload} from "../../src/cloudinary"
+import {upload} from "../cloudinary"
 
 const router = Router();
 
