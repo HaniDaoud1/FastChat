@@ -67,7 +67,7 @@ export default function LoginPage() {
           <span className={`${pacifico.className} text-green-600 text-lg`}>
             Fast Chat
           </span>{" "}
-          propulsé par{" "}
+          By{" "}
           <span className={`${pacifico.className} text-blue-700 text-lg`}>
             Fast
           </span>
