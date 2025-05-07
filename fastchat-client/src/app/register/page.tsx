@@ -63,7 +63,7 @@ export default function RegisterPage() {
     }
 
     try {
-      const res = await fetch("http://localhost:3002/auth/register", {
+      const res = await fetch("https://fastchat-5.onrender.com/auth/register", {
         method: "POST",
         body: data,
       });

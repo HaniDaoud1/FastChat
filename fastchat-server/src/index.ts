@@ -15,7 +15,8 @@ const app = express();
 
 app.use(cors({
   origin: ["http://localhost:3000",
-    "http://localhost:3003"
+    "http://localhost:3003",
+    "https://fast-chat-eight.vercel.app/"
   ],
   credentials: true,
 }));

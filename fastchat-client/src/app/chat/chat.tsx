@@ -29,7 +29,7 @@ const Chat = () => {
   const socketRef = useRef<Socket | null>(null);
 
   useEffect(() => {
-    const socket = io("http://localhost:3002", {
+    const socket = io("https://fastchat-5.onrender.com", {
       transports: ["websocket", "polling"],
     });
 
