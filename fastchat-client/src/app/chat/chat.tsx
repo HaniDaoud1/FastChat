@@ -88,7 +88,7 @@ const Chat = () => {
 
   const deleteMsg = async (id: string) => {
     try {
-      const res = await fetch(`http://localhost:3002/deletemessage/${id}`, {
+      const res = await fetch(`https://fastchat-5.onrender.com/deletemessage/${id}`, {
         method: "DELETE",
       });
 
@@ -159,7 +159,7 @@ const Chat = () => {
               } mb-2`}
             >
               <div className="max-w-[70%]">
-                <span className="text-xs text-gray-500 mb-1 block text-left">
+                <span className="text-xs text-gray-500 mb-1 ml-2 block text-left">
                   {msg.username}
                 </span>
                 <div
@@ -174,8 +174,8 @@ const Chat = () => {
                       src={avatar}
                       alt="avatar"
                       width={36}
-                      height={36}
-                      className="rounded-full mr-3"
+                      height={40}
+                      className="object-cover h-10 w-10 rounded-full mr-3"
                     />
                   )}
                   {msg.text && <div>{msg.text}</div>}
@@ -186,7 +186,7 @@ const Chat = () => {
                         alt="avatar"
                         width={36}
                         height={36}
-                        className="rounded-full ml-3"
+                        className="rounded-full h-10 w-10 ml-3"
                       />
                       <button
                         onClick={() => {
