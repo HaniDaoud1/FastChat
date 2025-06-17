@@ -27,6 +27,7 @@ setInterval(() => {
 }, 600000); // Toutes les 10 minutes (600000ms)
 
 const allowedOrigins = [
+  "http://192.168.1.45:3002",
   "http://localhost:3000",      // pour test local
   "http://localhost:3003",      // autre port local
   "https://fast-chat-eight.vercel.app" // frontend déployé
